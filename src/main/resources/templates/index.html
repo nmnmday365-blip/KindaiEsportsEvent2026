@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>近大eスポーツ2026 | KINDAI eSports Festival</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&family=Noto+Sans+JP:wght@400;700;900&family=Orbitron:wght@500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a
+        class="brand event-logo event-logo-compact"
+        th:href="@{/}"
+        aria-label="KINDAI eSports Festival ホーム"
+      >
+        <span class="event-logo-main">KINDAI</span>
+        <span class="event-logo-sub">eSports Festival</span>
+      </a>
+      <input
+        class="nav-toggle"
+        id="nav-toggle"
+        type="checkbox"
+        aria-label="メニューを開閉"
+      />
+      <label class="hamburger" for="nav-toggle" aria-hidden="true"
+        ><span></span
+      ></label>
+      <nav class="nav" aria-label="メインメニュー">
+        <a th:href="@{/}">ホーム</a>
+        <details class="nav-group">
+          <summary>イベント</summary>
+          <a th:href="@{/event-a}">つなげ！絆とレール〜暴走列車近大行き〜</a>
+          <a th:href="@{/event-b}">MOFF MOFF CUP</a>
+        </details>
+        <a th:href="@{/news}">お知らせ</a>
+        <a th:href="@{/location}">場所</a>
+        <a th:href="@{/coming-soon}">感想フォーム</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <p class="eyebrow">KINDAI ESPORTS ARENA / SUMMER 2026</p>
+          <div class="hero-title-row">
+            <h1 class="event-logo event-logo-hero">
+              <span class="event-logo-main">KINDAI</span>
+              <span class="event-logo-sub">eSports Festival</span>
+            </h1>
+            <div
+              class="hero-date-wrap hero-date-wrap-mobile"
+              aria-label="開催日"
+            >
+              <div class="date-badge">
+                <span>2026.</span>
+                <strong>8/22-23</strong>
+                <small>両日開催</small>
+              </div>
+            </div>
+          </div>
+          <p class="catch">
+            eスポーツを知らなくても大丈夫。 見て、遊んで、応援して、
+            新しい「楽しい」を見つけよう。
+          </p>
+        </div>
+        <div class="hero-date-wrap hero-date-wrap-desktop" aria-label="開催日">
+          <div class="date-badge">
+            <span>2026.</span>
+            <strong>8/22-23</strong>
+            <small>両日開催</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="section news-section" aria-labelledby="news-title">
+        <a class="news-card" th:href="@{/news}">
+          <span class="news-label">NEWS</span>
+          <h2 id="news-title">
+            イベントサイトを公開しました。予約フォームは準備中です。
+          </h2>
+        </a>
+      </section>
+
+      <section class="section events-section">
+        <div class="section-heading">
+          <p class="eyebrow">EVENTS</p>
+          <h2>2つの体験プログラム</h2>
+          <p class="section-lead">
+            イベントの参加予約は各プログラムの詳細ページよりお申し込みください！
+          </p>
+        </div>
+        <div class="event-grid">
+          <article class="event-card">
+            <div
+              class="visual-panel visual-coming-soon event-key-visual"
+              aria-hidden="true"
+            >
+              <span>COMING SOON</span>
+            </div>
+            <div class="event-card-body">
+              <p class="tag">8月22日 / 11:00-16:00</p>
+              <h3>つなげ！絆とレール〜暴走列車近大行き〜</h3>
+              <p>ゲームタイトル：Un railed!</p>
+              <p>
+                仲間と協力してレールをつなぎ、 暴走列車をゴールへ導こう！
+                必要なのはゲームの上手さではなく、
+                コミュニケーションとチームワーク。 初心者から経験者まで、
+                誰でも楽しめる協力型eスポーツイベントです。
+              </p>
+              <a class="button small" th:href="@{/event-a}">詳細を見る</a>
+            </div>
+          </article>
+          <article class="event-card">
+            <div
+              class="visual-panel visual-coming-soon event-key-visual"
+              aria-hidden="true"
+            >
+              <span>COMING SOON</span>
+            </div>
+            <div class="event-card-body">
+              <p class="tag">8月23日 / 11:00-17:00</p>
+              <h3>MOFF MOFF CUP</h3>
+              <p>ゲームタイトル：coming soon</p>
+              <p>
+                仲間と協力して戦う4対4のアニマル大乱闘！
+                つかんで投げて、最後まで生き残れ！
+                初心者も近大生がサポートするので安心！
+                観客も巻き込む、笑顔と熱気あふれるハチャメチャなパーティーeスポーツイベントです！
+              </p>
+              <a class="button small" th:href="@{/event-b}">詳細を見る</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section about-section">
+        <div class="section-heading">
+          <p class="eyebrow">ABOUT</p>
+          <h2>開催概要</h2>
+        </div>
+        <div class="about-layout">
+          <div class="hero-card">
+            <span>開催概要</span>
+            <strong>場所：近畿大学 Eキャンパス E館 esports Arena</strong>
+            <dl class="mini-stats">
+              <div>
+                <dt>日付</dt>
+                <dd>8月22〜23日 11:00〜16:00(最終受付15:00)</dd>
+              </div>
+              <div>
+                <dt>参加費</dt>
+                <dd>無料</dd>
+              </div>
+              <div>
+                <dt>持ち物</dt>
+                <dd>不要</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <section class="section band">
+        <div>
+          <p class="eyebrow">HOW TO JOIN</p>
+          <h2>イベント参加方法</h2>
+        </div>
+        <ol class="flow-list">
+          <li>
+            <span class="flow-icon" aria-hidden="true">
+              <svg viewBox="0 0 96 96" focusable="false">
+                <rect x="24" y="10" width="42" height="76" rx="8"></rect>
+                <path d="M33 20h24"></path>
+                <circle cx="45" cy="50" r="16"></circle>
+                <path d="M38 50l5 5 11-13"></path>
+                <path d="M63 69l-7-7c-2-2-1-5 2-6 1 0 2 0 3 1l12 12"></path>
+                <path d="M73 69c2-2 5-1 6 1l2 5v8"></path>
+                <path d="M61 77l8 8 11 4"></path>
+                <path d="M71 48l-3 7"></path>
+                <path d="M80 54l-6 5"></path>
+              </svg>
+            </span>
+            <strong>予約</strong>
+            <p>イベント詳細ページより簡単お申し込み！<br /></p>
+          </li>
+          <li>
+            <span class="flow-icon" aria-hidden="true">
+              <svg viewBox="0 0 96 96" focusable="false">
+                <circle cx="48" cy="24" r="12"></circle>
+                <path d="M31 45c4-9 30-9 34 0"></path>
+                <rect x="26" y="48" width="44" height="28" rx="4"></rect>
+                <path d="M34 76h28"></path>
+              </svg>
+            </span>
+            <strong>受付</strong>
+            <p>
+              当日、esports Arenaに<br />
+              お越しください！！
+            </p>
+          </li>
+          <li>
+            <span class="flow-icon" aria-hidden="true">
+              <svg viewBox="0 0 96 96" focusable="false">
+                <circle cx="28" cy="24" r="9"></circle>
+                <circle cx="68" cy="24" r="9"></circle>
+                <path d="M14 49c3-13 25-13 28 0"></path>
+                <path d="M54 49c3-13 25-13 28 0"></path>
+                <path
+                  d="M28 58h40c8 0 12 6 13 18 0 5-5 8-9 5l-8-7H32l-8 7c-4 3-9 0-9-5 1-12 5-18 13-18z"
+                ></path>
+                <path d="M33 68h12"></path>
+                <path d="M39 62v12"></path>
+                <circle cx="61" cy="68" r="2"></circle>
+                <circle cx="70" cy="68" r="2"></circle>
+              </svg>
+            </span>
+            <strong>体験</strong>
+            <p>
+              チームの仲間、近大生と<br />
+              ゲームを通して交流！
+            </p>
+          </li>
+        </ol>
+        <p class="flow-feedback">
+          参加後は、<a th:href="${feedbackFormUrl}">こちらの感想フォーム</a
+          >より<br />
+          ご感想をお願いいたします！
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 近畿大学 esports 体験イベント</p>
+    </footer>
+  </body>
+</html>
