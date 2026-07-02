@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アクセス | みんなのeSports Arena</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Orbitron:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<header class="site-header">
+    <a class="brand" th:href="@{/}">近大eスポーツ2026</a>
+    <input class="nav-toggle" id="nav-toggle" type="checkbox" aria-label="メニューを開閉">
+    <label class="hamburger" for="nav-toggle" aria-hidden="true"><span></span></label>
+    <nav class="nav" aria-label="メインメニュー">
+        <a th:href="@{/}">ホーム</a>
+        <details class="nav-group">
+            <summary>イベント</summary>
+            <a th:href="@{/event-a}">つなげ！絆とレール〜暴走列車近大行き〜</a>
+            <a th:href="@{/event-b}">近大もふもふアニマル決定戦</a>
+        </details>
+        <a th:href="@{/news}">お知らせ</a>
+        <a th:href="@{/location}">場所</a>
+        <a th:href="@{/coming-soon}">感想フォーム</a>
+    </nav>
+</header>
+
+<main class="page">
+    <section class="page-heading">
+        <p class="eyebrow">ACCESS</p>
+        <h1>アクセス</h1>
+        <p>会場：近畿大学 Eキャンパス E館 esports Arena</p>
+    </section>
+
+    <section class="location-layout">
+        <div class="venue-info">
+            <span class="tag">VENUE</span>
+            <h2>会場名</h2>
+            <p class="large">近畿大学 Eキャンパス E館 esports Arena</p>
+            <h2>住所</h2>
+            <p>大阪府東大阪市小若江3丁目4-1 近畿大学 東大阪キャンパス EキャンパスE館（情報学部棟）一階</p>
+            <h2>アクセス方法</h2>
+            <ul>
+                <li>近鉄大阪線「長瀬駅」から徒歩約10分を想定しています。</li>
+                <li>当日はE館入口付近に案内スタッフを配置する想定です。</li>
+                <li>受付で予約名を伝え、参加シールを受け取ってから入場します。</li>
+                <li>駐車場案内は掲載せず、公共交通機関での来場を推奨します。</li>
+            </ul>
+            <h2>当日の注意</h2>
+            <ul>
+                <li>開始10分前までに受付へお越しください。</li>
+            </ul>
+        </div>
+
+        <div class="dummy-map" aria-label="Google Map風のダミー表示">
+            <div class="map-toolbar">
+                <span></span>
+                <strong>近畿大学 Eキャンパス E館 esports Arena</strong>
+            </div>
+            <div class="map-grid"></div>
+            <div class="map-pin">
+                <span></span>
+                <strong>会場</strong>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <p>&copy; 2026 近畿大学 esports 体験イベント </p>
+</footer>
+</body>
+</html>
